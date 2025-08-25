@@ -11,9 +11,12 @@ body {
     line-height: 1.6;
 }
 
+/* Навигационное меню */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     background: rgba(26, 26, 26, 0.9);
     padding: 15px 20px;
@@ -33,6 +36,9 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -50,6 +56,7 @@ body {
     color: #ff69b4;
 }
 
+/* Баннер */
 .banner {
     position: relative;
     width: 100%;
@@ -131,20 +138,20 @@ body {
 .features li {
     font-size: 1.1em;
     margin: 15px 0;
-    text-align: center; /* Центрируем текст */
-    list-style: none; /* Убираем точки */
+    text-align: center;
+    list-style: none;
 }
 
 .feature-box {
-    display: inline-block; /* Делаем рамку обтекаемой вокруг текста */
-    padding: 10px 20px; /* Внутренний отступ */
-    background: url('neo-terra-interior-waterfall.jpg') repeat; /* Используем фото как фон */
-    background-size: cover; /* Масштабируем фото */
-    opacity: 0.7; /* Полупрозрачность */
-    border-radius: 10px; /* Скругление углов */
-    color: #fff; /* Текст белый для контраста */
-    text-align: center; /* Текст посередине */
-    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5); /* Неоновая тень */
+    display: inline-block;
+    padding: 10px 20px;
+    background: url('neo-terra-interior-waterfall.jpg') repeat;
+    background-size: cover;
+    opacity: 0.7;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 .photo-layout {
@@ -225,4 +232,46 @@ footer {
 footer a {
     color: #87ceeb;
     text-decoration: none;
+}
+
+/* Карусель для столиков */
+#our-tables .caption {
+    margin-top: 10px;
+    background: rgba(135, 206, 235, 0.7);
+    color: #1a1a1a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+}
+
+.close {
+    color: #ff69b4;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
